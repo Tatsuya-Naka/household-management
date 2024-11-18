@@ -64,7 +64,7 @@ export default async function Home() {
               />
               <div className="float-right">
                 <div className="flex items-center justify-center">
-                  Wow
+                  Wow Awesome
                 </div>
               </div>
             </div>
