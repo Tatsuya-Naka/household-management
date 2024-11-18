@@ -5,7 +5,7 @@ import SavingsIcon from '@mui/icons-material/Savings';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
 import SportsBaseballOutlinedIcon from '@mui/icons-material/SportsBaseballOutlined';
-// import dataImage1 from "../../public/data1.png";
+import dataImage1 from "../../public/data1.png";
 
 export default async function Home() {
   return (
@@ -55,13 +55,13 @@ export default async function Home() {
 
             {/* Header content */}
             <div className="bg-no-repeat bg-contain h-[220px]">
-              {/* <Image 
+              <Image 
                 src={dataImage1}
                 alt="App description"
                 height={2000}
                 width={2000}
                 className="float-left max-h-[calc(100vh-50px)] max-w-[50%]"
-              /> */}
+              />
               <div className="float-right">
                 <div className="flex items-center justify-center">
                   Wow
