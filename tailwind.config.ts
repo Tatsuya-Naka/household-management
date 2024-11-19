@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        'shinchan': `url(/shinchan.png)`,
+      }
     },
   },
   plugins: [],

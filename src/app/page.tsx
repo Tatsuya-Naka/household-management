@@ -6,6 +6,7 @@ import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
 import SportsBaseballOutlinedIcon from '@mui/icons-material/SportsBaseballOutlined';
 import dataImage1 from "../../public/data1.png";
+import paths from "~/server/path";
 
 export default async function Home() {
   return (
@@ -29,13 +30,13 @@ export default async function Home() {
               {/* Loging, signin, color mode, share, sns(my github account) */}
               <div className="flex items-center font-mono">
                 <Link
-                  href="#"
+                  href={paths.loginUrl()}
                   className="mr-2 sm:text-base text-sm bg-transparent hover:underline underline-offset-4 text-white font-[700] transition duration-300 ease-in-out rounded-lg px-2 py-1 cursor-pointer"
                 >
                   Login
                 </Link>
                 <Link
-                  href="#"
+                  href={paths.signinUrl()}
                   className="bg-white sm:text-base text-sm hover:bg-opacity-80 text-steal-400 font-[700] hover:underline hover:underline-offset-4 text-green-400 transition duration-300 ease-in-out sm:rounded-lg rounded-md sm:px-2 px-1 sm:py-1 py-0.5 cursor-pointer"
                 >
                   Signup
@@ -64,7 +65,17 @@ export default async function Home() {
               />
               <div className="float-right">
                 <div className="flex items-center justify-center">
-                  Wow Awesome
+                  <h1 className="">
+
+                  </h1>
+                  <h3 className="">
+
+                  </h3>
+
+                  <Link
+                    href={paths.signinUrl()}
+                  >
+                  </Link>
                 </div>
               </div>
             </div>
