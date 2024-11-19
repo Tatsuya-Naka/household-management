@@ -6,7 +6,7 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "~/trpc/react";
 
 export const metadata: Metadata = {
-  title: "HMB",
+  title: "HMB - Household Management Book",
   description: "Household Management Book in the internet",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
