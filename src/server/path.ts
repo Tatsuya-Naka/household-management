@@ -11,6 +11,9 @@ const paths = {
     loginUrl() {
         return '/api/auth/login';
     },
+    home() {
+        return '/home';
+    },
 };
 
 export default paths;

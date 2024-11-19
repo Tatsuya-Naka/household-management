@@ -9,6 +9,7 @@ import dataImage1 from "../../public/data1.png";
 import paths from "~/server/path";
 
 export default async function Home() {
+  
   return (
     <HydrateClient>
       <div>

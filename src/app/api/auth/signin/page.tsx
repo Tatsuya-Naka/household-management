@@ -27,7 +27,7 @@ export default async function SignInPage() {
                 <div className="float-left md:inline-block hidden">
                     {/* Image or git of this app */}
                 </div>
-                <div className="flex flex-col items-center justify-center  bg-white shadow-xl rounded-lg sm:mx-auto sm:my-auto min-w-[480px] py-5 px-5">
+                <div className="flex flex-col items-center justify-center  bg-white shadow-xl rounded-lg sm:mx-auto sm:my-auto sm:min-w-[480px] mx-0 py-5 px-5">
                     <h3 className="text-xl font-[700] text-zinc-700 mb-2">
                         Signin
                     </h3>
