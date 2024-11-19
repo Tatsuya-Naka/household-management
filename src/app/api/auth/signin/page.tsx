@@ -2,6 +2,9 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Link from 'next/link';
 import paths from '~/server/path';
 import SavingsIcon from '@mui/icons-material/Savings';
+import { FcGoogle } from "react-icons/fc";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaApple } from "react-icons/fa";
 
 export default async function SignInPage() {
     return (
@@ -28,18 +31,38 @@ export default async function SignInPage() {
                     <h3 className="text-xl font-[700] text-zinc-700 mb-2">
                         Signin
                     </h3>
-                    <div className="w-full border-2 border-solid border-zinc-700 rounded-lg">
+                    <div className='h-[1px] bg-gray-200 w-full my-2' />
+                    <div className="w-full">
                         <form className="px-2 py-3 flex-col items-center gap-2">
                             <ul className="">
-                                <li className="">
-                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-1.5 py-0.5 flex items-center">
+                                <li className="mb-4">
+                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
                                         <EmailOutlinedIcon sx={{ fontSize: 32 }} className='text-zinc-700 mr-2' />
-                                        <span className='text-center mx-auto'>Signin with Your Email</span>
+                                        <span className='text-center mx-auto'>Signin with Email</span>
+                                    </Link>
+                                </li>
+                                <li className="mb-4">
+                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
+                                        <FcGoogle size={32} className='mr-2' />
+                                        <span className='text-center mx-auto'>Signin with Google</span>
+                                    </Link>
+                                </li>
+                                <li className="mb-4">
+                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
+                                        <FaXTwitter size={32} className='mr-2' />
+                                        <span className='text-center mx-auto'>Signin with X (Twitter)</span>
+                                    </Link>
+                                </li>
+                                <li className="">
+                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
+                                        <FaApple size={32} className='mr-2' />
+                                        <span className='text-center mx-auto'>Signin with Apple</span>
                                     </Link>
                                 </li>
                             </ul>
                         </form>
                     </div>
+                    <div className='h-[1px] bg-gray-200 w-full my-2' />
                     <div className='my-10'>
                         <Link
                             href={paths.loginUrl()}
