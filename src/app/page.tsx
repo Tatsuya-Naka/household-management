@@ -7,9 +7,16 @@ import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
 import SportsBaseballOutlinedIcon from '@mui/icons-material/SportsBaseballOutlined';
 import dataImage1 from "../../public/data1.png";
 import paths from "~/server/path";
+import { auth } from "~/server/auth";
+import { redirect } from "next/navigation";
 
-export default async function Home() {
+export default async function Default() {
+  const session = await auth();
   
+  if (session) {
+    redirect(paths.home());
+  }
+
   return (
     <HydrateClient>
       <div>

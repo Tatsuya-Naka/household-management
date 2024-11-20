@@ -14,6 +14,12 @@ const paths = {
     home() {
         return '/home';
     },
+    inputInfoUrl() {
+        return '/api/auth/signin/input';
+    },
+    signOutUrl() {
+        return '/api/auth/signout';
+    },
 };
 
 export default paths;

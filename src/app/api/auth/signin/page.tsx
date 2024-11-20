@@ -5,8 +5,22 @@ import SavingsIcon from '@mui/icons-material/Savings';
 import { FcGoogle } from "react-icons/fc";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
+import SiginInButton from '~/app/_components/siginin_button';
 
 export default async function SignInPage() {
+    const getIcon = (id: string) => {
+        switch (id) {
+            case "google":
+                return <FcGoogle size={32} className='mr-2' />
+            case "twitter":
+                return <FaXTwitter size={32} className='mr-2' />
+            case "apple":
+                return <FaApple size={32} className='mr-2' />
+            default:
+                return null;
+        }
+    };
+
     return (
         <div className="bg-white m-0 p-0 min-h-screen">
             {/* Header */}
@@ -42,22 +56,22 @@ export default async function SignInPage() {
                                     </Link>
                                 </li>
                                 <li className="mb-4">
-                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
-                                        <FcGoogle size={32} className='mr-2' />
+                                    <SiginInButton id="google">
+                                        {getIcon("google")}
                                         <span className='text-center mx-auto'>Signin with Google</span>
-                                    </Link>
+                                    </SiginInButton>
                                 </li>
                                 <li className="mb-4">
-                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
-                                        <FaXTwitter size={32} className='mr-2' />
+                                    <SiginInButton id="twitter">
+                                        {getIcon("twitter")}
                                         <span className='text-center mx-auto'>Signin with X (Twitter)</span>
-                                    </Link>
+                                    </SiginInButton>
                                 </li>
                                 <li className="">
-                                    <Link href={paths.signinWithEmail()} className="hover:bg-gray-100 w-full bg-transparent border-[1px] shadow-lg border-solid border-zinc-700 rounded-lg px-2 py-1.5 flex items-center">
-                                        <FaApple size={32} className='mr-2' />
+                                    <SiginInButton id="apple">
+                                        {getIcon("apple")}
                                         <span className='text-center mx-auto'>Signin with Apple</span>
-                                    </Link>
+                                    </SiginInButton>
                                 </li>
                             </ul>
                         </form>

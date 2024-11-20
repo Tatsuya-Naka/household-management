@@ -1,4 +1,15 @@
-export default async function SiginInEmailPage() {
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { auth } from "~/server/auth";
+import paths from "~/server/path";
+
+export default async function InputInfoPage() {
+    const session = await auth();
+
+    if (!session) {
+        redirect(paths.default());
+    }
+
     return (
         <div className="bg-white m-0 p-0 min-h-screen">
             <div className={`w-full bg-shinchan bg-cover bg-no-repeat min-h-screen flex items-center justify-center relative`}>
@@ -8,45 +19,18 @@ export default async function SiginInEmailPage() {
                             <h3 className='sm:text-xl text-start sm:mx-0 mx-auto text-lg font-[700] text-zinc-700'>
                                 Register - User Information
                             </h3>
+                            <Link
+                                href={paths.home()}
+                                className='sm:text-base sm:inline-block hidden text-zinc-700 underline underline-offset-4 hover:text-sky-600'
+                            >
+                                Later Register
+                            </Link>
                         </div>
 
                         <form className='w-full mx-0 flex flex-col sm:justify-center gap-4 h-full'>
                             <label className='flex flex-col gap-2 '>
                                 <span className='text-base font-[500] text-zinc-700'>
-                                    Email
-                                </span>
-                                <input
-                                    name='email'
-                                    type="email"
-                                    placeholder='email@example.com'
-                                    className='w-full rounded-lg border-2 border-solid border-gray-200 text-base px-3 py-2 outline-none'
-                                />
-                            </label>
-                            <label className='flex flex-col gap-2 '>
-                                <span className='text-base font-[500] text-zinc-700'>
-                                    Password
-                                </span>
-                                <input
-                                    name='password'
-                                    type="password"
-                                    placeholder=''
-                                    className='w-full rounded-lg border-2 border-solid border-gray-200 text-base px-3 py-2 outline-none'
-                                />
-                            </label>
-                            <label className='flex flex-col gap-2 '>
-                                <span className='text-base font-[500] text-zinc-700'>
-                                    Password - Double Check
-                                </span>
-                                <input
-                                    name='password'
-                                    type="password"
-                                    placeholder=''
-                                    className='w-full rounded-lg border-2 border-solid border-gray-200 text-base px-3 py-2 outline-none'
-                                />
-                            </label>
-                            <label className='flex flex-col gap-2 '>
-                                <span className='text-base font-[500] text-zinc-700'>
-                                    User name (Optional)
+                                    User name
                                 </span>
                                 <input
                                     name='name'
@@ -58,7 +42,7 @@ export default async function SiginInEmailPage() {
                             <div className='flex sm:flex-row flex-col items-center justify-around w-full sm:gap-2 gap-4'>
                                 <label className='flex flex-col gap-2 w-full'>
                                     <span className='text-base font-[500] text-zinc-700'>
-                                        Preferred Currency (Optional)
+                                        Preferred Currency
                                     </span>
                                     <input
                                         name='currency'
@@ -69,7 +53,7 @@ export default async function SiginInEmailPage() {
                                 </label>
                                 <label className='flex flex-col gap-2 w-full'>
                                     <span className='text-base font-[500] text-zinc-700'>
-                                        Where you are (Optional)
+                                        Where you are
                                     </span>
                                     <input
                                         name='location'
@@ -85,6 +69,12 @@ export default async function SiginInEmailPage() {
                             >
                                 Register
                             </button>
+                            <Link
+                                href={paths.home()}
+                                className='sm:text-base sm:hidden inline-block mt-10 text-center text-zinc-700 underline underline-offset-4 hover:text-sky-600'
+                            >
+                                Later Register
+                            </Link>
                         </form>
                     </div>
                 </div>
