@@ -19,8 +19,6 @@ export default async function Home() {
             >
                 Signout
             </Link>
-
-            {session.user.id}
         </div>
     )
 }
