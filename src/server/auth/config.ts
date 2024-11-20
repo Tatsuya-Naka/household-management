@@ -56,7 +56,7 @@ export const authConfig = {
       },
     }),
     async redirect({url, baseUrl}) {
-      return url.startsWith(baseUrl) ? `${baseUrl}${paths.inputInfoUrl()}` : `${paths.inputInfoUrl()}`
+      return `${baseUrl}${paths.inputInfoUrl()}`
     }
   },
 

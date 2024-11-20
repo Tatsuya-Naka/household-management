@@ -13,7 +13,7 @@ import { redirect } from "next/navigation";
 export default async function Default() {
   const session = await auth();
   
-  if (session) {
+  if (session?.user) {
     redirect(paths.home());
   }
 

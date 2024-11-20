@@ -6,7 +6,7 @@ import paths from "~/server/path";
 export default async function Home() {
     const session = await auth();
 
-    if (!session) {
+    if (!session?.user) {
         redirect(paths.default());
     }
 

@@ -5,7 +5,7 @@ import paths from "~/server/path";
 export default async function SignOutPage() {
     const session = await auth();
 
-    if (!session) {
+    if (!session?.user) {
         redirect(paths.default());
     }
 
